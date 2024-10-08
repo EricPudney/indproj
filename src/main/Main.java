@@ -14,30 +14,28 @@ public class Main {
         Hero player = new Hero("Bob");
         Location loc = new Location();
 
-        /*Sword sword = new Sword(RandomGeneration.generateRandomQuality(), RandomGeneration.generateRandomMaterial());
+        Sword sword = new Sword(RandomGeneration.generateRandomQuality(), RandomGeneration.generateRandomMaterial());
         System.out.println(sword);
-        System.out.println(player);
 
         if (player.inventory.add(sword)) {
-            System.out.println(player);
+            System.out.println(player + ", attack: " + player.getAttack());
         }
         if (player.equip(sword)) {
             sword.applyEffect(player);
-            System.out.println(player);
-        }*/
-        Apple apple = new Apple();
-        for (int i = 0; i < 30; i++) {
-            apple = new Apple();
-            player.inventory.add(apple);
+            System.out.println(player+ ", attack:  " + player.getAttack());
         }
-    /*    System.out.println(player);
+        Apple apple = new Apple(9);
+        Apple anotherApple = new Apple();
+        Apple yetAnotherApple = new Apple();
+        player.inventory.add(apple);
+        player.inventory.add(anotherApple);
+        player.inventory.add(yetAnotherApple);
+
+        System.out.println(player);
         if (player.eat(sword)) {
             System.out.println("Oops, I ate a sword.");
         }
-        if (player.eat(apple)) {
-            System.out.println(player);
-        }
-        Location loc = new Location();
+        player.eat(apple);
         System.out.println(loc);
         if (loc.enemy != null) {
             System.out.println(loc.enemy);
@@ -56,7 +54,7 @@ public class Main {
         }
         if (player.equip(helm)) {
             System.out.println(player);
-        }*/
+        }
 
         player.dropItem(apple, loc);
         System.out.println(loc);

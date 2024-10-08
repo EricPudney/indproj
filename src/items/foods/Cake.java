@@ -6,4 +6,7 @@ public class Cake extends Food {
         healthRestored = 5;
         maxQuantity = 5;
     }
+    public Cake(int quantity) {
+        super("Cake", "A delicious chocolate cake!", quantity);
+    }
 }

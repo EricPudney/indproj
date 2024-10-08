@@ -13,38 +13,41 @@ public class Inventory extends ArrayList<Item> {
     }
 
     public Inventory() {
-        this.maxSpaces = 10;
+        this.maxSpaces = 1000;
     }
 
     @Override
     public boolean add(Item item) {
         if (item instanceof Stackable) {
             for (Item i : this) {
+                // if a matching stackable item exists and the current stack is not full:
                 if (i.getClass() == item.getClass() && ((Stackable) i).quantity < ((Stackable) i).maxQuantity) {
                     Stackable stack = ((Stackable) i);
                     int itemQuantity = ((Stackable) item).quantity;
+                    // increase by the new quantity if it will fit in the stack
                     if (stack.quantity + itemQuantity <= stack.maxQuantity) {
                         stack.quantity += itemQuantity;
                         return true;
                     }
+                    // or fill up the current stack and call the add function again on remaining items
                     else {
                         int difference = stack.maxQuantity - stack.quantity;
                         ((Stackable) item).quantity -= difference;
                         stack.quantity = stack.maxQuantity;
-                        if (itemQuantity > 0) {
+                        if (((Stackable) item).quantity > 0) {
                             return this.add(item);
                         }
                     }
                 }
             }
         }
+        // adds non-stackable items or starts a new stack
         if (this.size() < this.maxSpaces) {
-            super.add(item);
-            return true;
+                super.add(item);
+                return true;
         }
-        else {
-            return false;
-        }
+        // returns false if the inventory is full
+        return false;
     }
 
     public String toString() {

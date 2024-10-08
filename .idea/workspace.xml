@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/items/foods/Edible.java" afterDir="false" />
+    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dungeon/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeon/Dungeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dungeon/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeon/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inventories/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inventories/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/Equippable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Equippable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/Stackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Stackable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/armour/Armour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/armour/Armour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/armour/Helmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/armour/Helmet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/foods/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/foods/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Cake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/foods/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/weapons/FireSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/FireSword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/weapons/FireWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/MagicalWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/weapons/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/Sword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/RandomGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RandomGeneration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +111,7 @@
       <workItem from="1728022286549" duration="18351000" />
       <workItem from="1728042534985" duration="11296000" />
       <workItem from="1728284868149" duration="19839000" />
-      <workItem from="1728371649116" duration="4190000" />
+      <workItem from="1728371649116" duration="9878000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -135,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728054721990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated">
+      <option name="closed" value="true" />
+      <created>1728380848614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728380848614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
 </project>

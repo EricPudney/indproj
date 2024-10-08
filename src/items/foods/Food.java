@@ -12,6 +12,10 @@ public abstract class Food extends Stackable implements Edible {
         super(name, description, price);
     }
 
+    public Food(String name, String description, int price, int quantity) {
+        super(name, description, price, quantity);
+    }
+
     public int getHealthRestored() {
         return healthRestored;
     }
