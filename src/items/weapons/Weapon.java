@@ -8,7 +8,7 @@ import items.Quality;
 
 public abstract class Weapon extends Item implements Equippable {
     String name;
-    Material material;
+    final Material material;
     Quality quality;
     int attack;
 

@@ -3,6 +3,6 @@ package items;
 import characters.Character;
 
 public interface Equippable {
-    boolean equip(Character character);
-    boolean unEquip(Character character);
+    void applyEffect(Character character);
+    void removeEffect(Character character);
 }

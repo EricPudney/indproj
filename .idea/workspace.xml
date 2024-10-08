@@ -4,37 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ind-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/characters/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/characters/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dungeon/Descriptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dungeon/Dungeon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dungeon/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/inventories/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/Equippable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/Quality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/Stackable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/armour/Armour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/armour/Helmet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/foods/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/foods/Cake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/foods/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/weapons/FireSword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/weapons/FireWeapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/weapons/Sword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/weapons/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/RandomGeneration.java" afterDir="false" />
+    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/items/foods/Edible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dungeon/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeon/Dungeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dungeon/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeon/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inventories/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inventories/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/Equippable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Equippable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/Stackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Stackable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/armour/Armour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/armour/Armour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/armour/Helmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/armour/Helmet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/foods/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/foods/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Cake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/foods/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/weapons/FireSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/FireSword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/weapons/FireWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/MagicalWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/weapons/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/Sword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +36,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EricPudney&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EricPudney/indproj&quot;,
+    &quot;accountId&quot;: &quot;589a3e27-8ec4-4a08-acb3-fa4f2518b010&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -76,6 +82,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -116,11 +123,26 @@
       <option name="presentableId" value="Default" />
       <updated>1728022285444</updated>
       <workItem from="1728022286549" duration="18351000" />
-      <workItem from="1728042534985" duration="10870000" />
+      <workItem from="1728042534985" duration="11296000" />
+      <workItem from="1728284868149" duration="19839000" />
+      <workItem from="1728371649116" duration="4190000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1728054721990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728054721990</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

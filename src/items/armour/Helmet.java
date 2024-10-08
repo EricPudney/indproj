@@ -11,34 +11,16 @@ public class Helmet extends Armour {
         this.name = quality.name().toLowerCase() + " " + material.name().toLowerCase() + " helmet";
     }
 
+
     @Override
-    public boolean equip(Character character) {
-        if (character.equippedHelmet == null) {
-            character.inventory.remove(this);
-            character.equippedHelmet = this;
-            return true;
-        }
-        else {
-            System.out.println("You're already wearing a helmet!");
-            return false;
-        }
+    public void applyEffect(Character character) {
+        double totalDefence = character.getDefence() + this.defence;
+        character.setDefence(totalDefence);
     }
 
     @Override
-    public boolean unEquip(Character character) {
-        if (character.equippedHelmet == this) {
-            if (character.inventory.add(this)) {
-                character.equippedHelmet = null;
-                return true;
-            }
-            else {
-                System.out.println("Unable to remove helmet. Is your inventory full?");
-                return false;
-            }
-        }
-        else {
-            System.out.println("You're not wearing a helmet!");
-            return false;
-        }
+    public void removeEffect(Character character) {
+        double totalDefence = character.getDefence();
+        character.setDefence(totalDefence - this.defence);
     }
 }

@@ -5,14 +5,22 @@ import items.armour.Helmet;
 import items.weapons.Weapon;
 
 public abstract class Character {
-    public String name;
+    public final String name;
     public Helmet equippedHelmet;
     public Weapon equippedWeapon;
     public Inventory inventory;
+    int maxHealth;
     int health;
+    double defence;
+    int attack;
+    public boolean fireproof = false;
 
     public Character(String name) {
         this.name = name;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
     }
 
     public int getHealth() {
@@ -25,5 +33,21 @@ public abstract class Character {
 
     public Object getName() {
         return name;
+    }
+
+    public void setDefence(double defence) {
+        this.defence = defence;
+    }
+
+    public double getDefence() {
+        return defence;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public int getAttack() {
+        return attack;
     }
 }

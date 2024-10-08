@@ -1,7 +1,7 @@
 package dungeon;
 
 public class Dungeon {
-    Location[][] locations;
+    final Location[][] locations;
 
     public Dungeon(int height, int width) {
         locations = new Location[height][width];

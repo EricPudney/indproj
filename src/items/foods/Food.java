@@ -1,31 +1,36 @@
 package items.foods;
 
 import characters.Character;
-import items.Item;
 import items.Stackable;
 
-public abstract class Food extends Stackable implements Item.Edible {
+import static java.lang.Math.min;
+
+public abstract class Food extends Stackable implements Edible {
     int healthRestored;
 
     public Food(String name, String description, int price) {
         super(name, description, price);
     }
 
-
-    // needed?
     public int getHealthRestored() {
         return healthRestored;
     }
 
-    public void setHealthRestored(int healthRestored) {
-        this.healthRestored = healthRestored;
-    }
-
-
     public void consume(Character character) {
         int health = character.getHealth();
         health += healthRestored;
-        character.setHealth(health);
+        int maxHealth = character.getMaxHealth();
+        if (this.quantity > 1) {
+            this.quantity -= 1;
+            character.setHealth(min(health, maxHealth));
+            System.out.printf("Ate one %s, %d left\n", this.getName().toLowerCase(), this.quantity);
+        }
+        else if (this.quantity == 1 && character.inventory.remove(this)) {
+            character.setHealth(min(health, maxHealth));
+            System.out.printf("Ate last %s\n", this.getName().toLowerCase());
+        }
+        else {
+            System.out.printf("You don't have any %ss left!\n", this.getName().toLowerCase());
+        }
     }
-
 }

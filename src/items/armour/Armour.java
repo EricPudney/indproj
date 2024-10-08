@@ -8,7 +8,7 @@ import items.Quality;
 
 public abstract class Armour extends Item implements Equippable {
     String name;
-    Material material;
+    final Material material;
     Quality quality;
     int defence;
 

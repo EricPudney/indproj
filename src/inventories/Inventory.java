@@ -20,9 +20,21 @@ public class Inventory extends ArrayList<Item> {
     public boolean add(Item item) {
         if (item instanceof Stackable) {
             for (Item i : this) {
-                if (i.getClass() == item.getClass()) {
-                    ((Stackable) i).quantity += 1;
-                    return true;
+                if (i.getClass() == item.getClass() && ((Stackable) i).quantity < ((Stackable) i).maxQuantity) {
+                    Stackable stack = ((Stackable) i);
+                    int itemQuantity = ((Stackable) item).quantity;
+                    if (stack.quantity + itemQuantity <= stack.maxQuantity) {
+                        stack.quantity += itemQuantity;
+                        return true;
+                    }
+                    else {
+                        int difference = stack.maxQuantity - stack.quantity;
+                        ((Stackable) item).quantity -= difference;
+                        stack.quantity = stack.maxQuantity;
+                        if (itemQuantity > 0) {
+                            return this.add(item);
+                        }
+                    }
                 }
             }
         }

@@ -1,7 +1,5 @@
 package items;
 
-import characters.Character;
-
 public abstract class Item {
     String name;
     String description;
@@ -20,13 +18,4 @@ public abstract class Item {
         return this.name;
     }
 
-    public  interface Edible {
-        default void consume(Character character) {
-            int health = character.getHealth();
-            health += getHealthRestored();
-            character.setHealth(health);
-        }
-
-        int getHealthRestored();
-    }
 }

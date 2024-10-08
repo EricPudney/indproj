@@ -8,21 +8,21 @@ import main.RandomGeneration;
 import static main.Main.rand;
 
 public class Location {
-    Enemy enemy = null;
+    public Enemy enemy = null;
     String description;
-    Inventory inventory = new Inventory();
+    public final Inventory inventory = new Inventory();
 
     public Location() {
-    // either enemy or item or neither, but not both
+    // location contains either enemy with an item, or item, or neither
         if (rand.nextDouble() > 0.92) {
         this.enemy = new Enemy("Hobgoblin");
+        this.enemy.inventory.add(RandomGeneration.generateRandomItem());
     }
     else //if (rand.nextDouble() > 0.92)
     {
-        for (int i = 0; i < 5; i++) {
         Item item = RandomGeneration.generateRandomItem();
         this.inventory.add(item);
-    }
+
 
     }
     Descriptions[] descriptions = Descriptions.values();
