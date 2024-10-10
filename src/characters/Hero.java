@@ -1,10 +1,8 @@
 package characters;
 
-import dungeon.Location;
 import inventories.Inventory;
 import items.Equippable;
 import items.Item;
-import items.Stackable;
 import items.armour.Helmet;
 import items.foods.Edible;
 import items.weapons.Weapon;
@@ -14,7 +12,7 @@ public class Hero extends Character {
     public Hero(String name) {
         super(name);
         maxHealth = 100;
-        health = 100;
+        health = 96;
         this.inventory = new Inventory(30);
     }
 
@@ -23,40 +21,38 @@ public class Hero extends Character {
             System.out.println("That item cannot be equipped!");
             return false;
         }
-        if (item instanceof Helmet && equippedHelmet == null) {
+        // 1 weapon, 4 armour, 1 bag, up to 2 magic items?
+        else if (equippedItems.size() >= 8) {
+            System.out.println("You can't equip any more items!");
+            return false;
+        }
+        else {
+            for (Equippable i : equippedItems) {
+                if (i.getClass() == item.getClass() || (i instanceof Weapon && item instanceof Weapon)) {
+                    System.out.printf("You already have a %s equipped!\n", item.getClass().getSimpleName().toLowerCase());
+                    return false;
+                }
+            }
             this.inventory.remove(item);
-            equippedHelmet = (Helmet) item;
+            equippedItems.add((Equippable) item);
+            ((Equippable) item).applyEffect(this);
+            System.out.println("Equipped " + item);
             return true;
         }
-        if (item instanceof Weapon && equippedWeapon == null) {
-            this.inventory.remove(item);
-            equippedWeapon = (Weapon) item;
-            return true;
-        }
-        System.out.println("You already have an item equipped in that slot!");
-        return false;
     }
 
     public boolean unEquip(Equippable item) {
-        if (item instanceof Helmet && equippedHelmet == item) {
-            if (inventory.add((Item) item)) {
-                equippedHelmet = null;
+        if (!equippedItems.contains(item)) {
+            System.out.println("That item is not equipped!");
+        }
+        else {
+            if (equippedItems.remove(item) && inventory.add((Item) item)) {
+                item.removeEffect(this);
+                System.out.println("Unequipped " + item + " successfully!");
                 return true;
             }
-            else {
-                System.out.println("You don't have enough space in your inventory!");
-            }
+            System.out.println("Unable to unequip item! Is your inventory full?");
         }
-        if (item instanceof Weapon && equippedWeapon == item) {
-            if (inventory.add((Item) item)) {
-                equippedWeapon = null;
-                return true;
-            }
-            else {
-                System.out.println("You don't have enough space in your inventory!");
-            }
-        }
-        System.out.println("You don't have anything equipped there!");
         return false;
     }
 
@@ -71,44 +67,19 @@ public class Hero extends Character {
         }
     }
 
-    public void dropItem(Item item, Location location) {
-        if (item instanceof Stackable) {
-            boolean dropped = false;
-            int quantity = 0;
-            for (int i = 0; i < this.inventory.size(); i++) {
-                if (this.inventory.get(i) instanceof Stackable droppedItem && item.getClass() == droppedItem.getClass()) {
-                    quantity = droppedItem.quantity;
-                    this.inventory.remove(droppedItem);
-                    location.inventory.add(droppedItem);
-                    dropped = true;
-                    break;
-                }
-            }
-            if (!dropped) {
-                System.out.println("You don't have that item!");
-            }
-            else {
-                System.out.printf("Dropped %s x %d\n", item.getName(), quantity);
-            }
-        }
-        else if (this.inventory.remove(item)) {
-            location.inventory.add(item);
-        }
-        else {
-            System.out.println("You don't have that item!");
-        }
-    }
-
 
     public String toString() {
         String armourString = "";
         String weaponString = "";
-        if (equippedHelmet != null) {
-            armourString = "wearing " + equippedHelmet;
+        for (Equippable i : equippedItems) {
+            if (i instanceof Helmet) {
+                armourString = "wearing " + i;
+            }
+            if (i instanceof Weapon) {
+                weaponString = "wielding " + i;
+            }
         }
-        if (equippedWeapon != null) {
-            weaponString = "wielding " + equippedWeapon;
-        }
-        return "Hero: " + name + armourString + " " + weaponString + " is carrying: \n" + inventory.toString() + "\nHealth: " + getHealth();
+
+        return "Hero: " + name + " " + armourString + " " + weaponString + " is carrying: \n" + inventory.toString() + "\nHealth: " + getHealth();
     }
 }

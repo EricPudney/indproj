@@ -12,12 +12,8 @@ public abstract class Food extends Stackable implements Edible {
         super(name, description, price);
     }
 
-    public Food(String name, String description, int price, int quantity) {
-        super(name, description, price, quantity);
-    }
-
-    public int getHealthRestored() {
-        return healthRestored;
+    public Food(String name, String description, int price, int quantity, int maxQuantity) {
+        super(name, description, price, quantity, maxQuantity);
     }
 
     public void consume(Character character) {
@@ -27,11 +23,11 @@ public abstract class Food extends Stackable implements Edible {
         if (this.quantity > 1) {
             this.quantity -= 1;
             character.setHealth(min(health, maxHealth));
-            System.out.printf("Ate one %s, %d left\n", this.getName().toLowerCase(), this.quantity);
+            System.out.printf("Ate one %s, %d left in stack\n", this.getName().toLowerCase(), this.quantity);
         }
         else if (this.quantity == 1 && character.inventory.remove(this)) {
             character.setHealth(min(health, maxHealth));
-            System.out.printf("Ate last %s\n", this.getName().toLowerCase());
+            System.out.printf("Ate last %s in stack\n", this.getName().toLowerCase());
         }
         else {
             System.out.printf("You don't have any %ss left!\n", this.getName().toLowerCase());

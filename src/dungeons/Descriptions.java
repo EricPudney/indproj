@@ -1,4 +1,4 @@
-package dungeon;
+package dungeons;
 
 public enum Descriptions {
 

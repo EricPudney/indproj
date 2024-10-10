@@ -1,7 +1,9 @@
-package dungeon;
+package dungeons;
+
+import java.util.Arrays;
 
 public class Dungeon {
-    final Location[][] locations;
+    public final Location[][] locations;
 
     public Dungeon(int height, int width) {
         locations = new Location[height][width];
@@ -10,5 +12,10 @@ public class Dungeon {
                 locations[i][j] = new Location();
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Dungeon: \n" + Arrays.deepToString(locations);
     }
 }
