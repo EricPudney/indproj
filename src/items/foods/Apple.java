@@ -3,7 +3,7 @@ package items.foods;
 public class Apple extends Food {
 
     public Apple() {
-        super("Apple", "A beautiful crunchy apple", 2);
+        super("Apple", "A beautiful crunchy apple", 2, 10);
         healthRestored = 2;
     }
 

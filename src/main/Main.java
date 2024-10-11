@@ -47,12 +47,14 @@ public class Main {
         }
 
         // generate some cakes and apples. In inventory they stack up to max stack size
-        Apple apple = new Apple(8);
+        Apple apple = new Apple();
+        System.out.println(apple);
         Apple anotherApple = new Apple(8);
         Cake cake = new Cake(3);
         Cake moreCake = new Cake(3);
         player.inventory.add(apple);
         player.inventory.add(anotherApple);
+        player.inventory.add(new Apple(5));
         player.inventory.add(cake);
         player.inventory.add(moreCake);
         System.out.println(player);
@@ -104,11 +106,13 @@ public class Main {
         player.eat(cake);
         System.out.println(player);
 
-        // Apple tooManyApples = new Apple(25);
-        // commented out because this will throw an illegal argument exception.
-        // I thought the simplest way to stop players picking up items with a quantity
-        // higher than maxQuantity would be to prevent them from being created.
-        // Could also have dealt with this in the add() method of course, or just
-        // reduced the quantity to max in the constructor, but this seemed better to me.
+        // I decided to avoid issue of characters picking up more apples than will fit
+        // in a stack by not allowing them to be created in the first place
+        try {
+            Apple tooManyApples = new Apple(25);
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

@@ -2,7 +2,7 @@ package items;
 
 public abstract class Item {
     String name;
-    String description;
+    protected String description;
     int price;
 
     public Item() {}

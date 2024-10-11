@@ -79,7 +79,7 @@ public abstract class Character {
             location.inventory.add(item);
         }
         else {
-            System.out.printf("%s don't have that item!\n", this.name);
+            System.out.printf("%s doesn't have that item!\n", this.name);
         }
     }
 }

@@ -7,19 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="limited quantity in stackable constructors">
+    <list default="true" id="5557f89a-2799-4d5a-b706-acbf96548e67" name="Changes" comment="fixed stackables &amp; equippable logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dungeon/Descriptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeons/Descriptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dungeon/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeons/Dungeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dungeon/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dungeons/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/Stackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Stackable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/foods/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/foods/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Cake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/foods/Edible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Edible.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/items/foods/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/foods/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/weapons/MagicalWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/weapons/MagicalWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +117,8 @@
       <workItem from="1728284868149" duration="19839000" />
       <workItem from="1728371649116" duration="10530000" />
       <workItem from="1728462117331" duration="12641000" />
-      <workItem from="1728488875272" duration="620000" />
+      <workItem from="1728488875272" duration="1108000" />
+      <workItem from="1728629378377" duration="4286000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -148,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728396547814</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed stackables &amp; equippable logic">
+      <option name="closed" value="true" />
+      <created>1728591422325</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728591422325</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +162,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="updated" />
     <MESSAGE value="limited quantity in stackable constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="limited quantity in stackable constructors" />
+    <MESSAGE value="fixed stackables &amp; equippable logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stackables &amp; equippable logic" />
   </component>
 </project>

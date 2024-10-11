@@ -8,8 +8,9 @@ import static java.lang.Math.min;
 public abstract class Food extends Stackable implements Edible {
     int healthRestored;
 
-    public Food(String name, String description, int price) {
-        super(name, description, price);
+    public Food(String name, String description, int price, int maxQuantity) {
+        super(name, description, price, maxQuantity);
+        quantity = 1;
     }
 
     public Food(String name, String description, int price, int quantity, int maxQuantity) {
@@ -32,5 +33,9 @@ public abstract class Food extends Stackable implements Edible {
         else {
             System.out.printf("You don't have any %ss left!\n", this.getName().toLowerCase());
         }
+    }
+
+    public String toString() {
+        return this.getName() + ": " + this.description;
     }
 }
